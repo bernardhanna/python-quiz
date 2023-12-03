@@ -1,23 +1,28 @@
 [
   {
     "category": "datetime",
+    "question": "How to import the datetime module?",
+    "answer": "from datetime import datetime"
+  },
+  {
+    "category": "datetime",
     "question": "How do you create a datetime object for January 1, 2023, at 12:00 PM?",
-    "answer": "from datetime import datetime\ndt = datetime(2023, 1, 1, 12, 0)"
+    "answer": "dt = datetime(2023, 1, 1, 12, 0)"
   },
   {
     "category": "datetime",
     "question": "Write the code to get the current date and time using datetime.",
-    "answer": "from datetime import datetime\ncurrent_dt = datetime.now()"
+    "answer": "current_dt = datetime.now()"
   },
   {
     "category": "datetime",
     "question": "How do you create a datetime object from the ISO format string '2023-01-01T12:00:00'?",
-    "answer": "from datetime import datetime\ndt = datetime.fromisoformat('2023-01-01T12:00:00')"
+    "answer": "dt = datetime.fromisoformat('2023-01-01T12:00:00')"
   },
   {
     "category": "datetime",
     "question": "Write the code to parse a datetime string '01/02/2023 15:30:00' using strptime.",
-    "answer": "from datetime import datetime\ndt = datetime.strptime('01/02/2023 15:30:00', '%d/%m/%Y %H:%M:%S')"
+    "answer": "dt = datetime.strptime('01/02/2023 15:30:00', '%d/%m/%Y %H:%M:%S')"
   },
   {
     "category": "datetime",
@@ -47,12 +52,12 @@
   {
     "category": "datetime",
     "question": "Write the code to create a date object representing today's date.",
-    "answer": "from datetime import date\ntoday = date.today()"
+    "answer": "today = date.today()"
   },
   {
     "category": "datetime",
     "question": "How do you create a date object from the ISO format string '2023-01-01'?",
-    "answer": "from datetime import date\nd = date.fromisoformat('2023-01-01')"
+    "answer": "d = date.fromisoformat('2023-01-01')"
   },
   {
     "category": "datetime",
@@ -72,7 +77,7 @@
   {
     "category": "datetime",
     "question": "How do you create a date object for March 14, 2023?",
-    "answer": "from datetime import date\ndate_obj = date(2023, 3, 14)"
+    "answer": "date_obj = date(2023, 3, 14)"
   },
   {
     "category": "datetime",
