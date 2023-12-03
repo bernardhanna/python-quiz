@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Pytests",
+    "question": "Write a pytest to import the 'is_valid_username' function from the module 'asl'.",
+    "answer": "from asl import is_valid_username\ndef test_import_is_valid_username():\n    assert callable(is_valid_username)"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a pytest function to test if the 'is_valid_username' function returns False for an empty string.",
+    "answer": "def test_validate_empty_string():\n    assert is_valid_username('') == False"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a pytest function to test if the 'is_valid_username' function correctly identifies 'jbloggs' as a valid username.",
+    "answer": "def test_validate_jbloggs():\n    assert is_valid_username('jbloggs') == True"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a pytest test function to test a function 'add(a, b)' which adds two numbers. Test if add(2, 3) returns 5.",
+    "answer": "def test_add():\n    assert add(2, 3) == 5"
+  },
+  {
+    "category": "Pytests",
+    "question": "Create a pytest test to check if the 'capitalize_string(string)' function capitalizes the first letter of 'hello'.",
+    "answer": "def test_capitalize_string():\n    assert capitalize_string('hello') == 'Hello'"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a pytest test for a function 'get_length(s)' that tests the length of the string 'Python'.",
+    "answer": "def test_get_length():\n    assert get_length('Python') == 6"
+  },
+  {
+    "category": "Pytests",
+    "question": "Create a test for a 'reverse_string(s)' function to check if it correctly reverses the string 'abc'.",
+    "answer": "def test_reverse_string():\n    assert reverse_string('abc') == 'cba'"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a test for a 'is_palindrome(s)' function to assert that 'radar' is a palindrome.",
+    "answer": "def test_is_palindrome():\n    assert is_palindrome('radar') is True"
+  },
+  {
+    "category": "Pytests",
+    "question": "Create a pytest test for 'concatenate_strings(str1, str2)' to verify if it correctly concatenates 'foo' and 'bar'.",
+    "answer": "def test_concatenate_strings():\n    assert concatenate_strings('foo', 'bar') == 'foobar'"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a pytest function to test 'to_lowercase(s)' ensuring 'HELLO' is converted to 'hello'.",
+    "answer": "def test_to_lowercase():\n    assert to_lowercase('HELLO') == 'hello'"
+  },
+  {
+    "category": "Pytests",
+    "question": "Create a test to check if 'remove_whitespace(s)' correctly trims spaces from ' hello world '.",
+    "answer": "def test_remove_whitespace():\n    assert remove_whitespace(' hello world ') == 'hello world'"
+  },
+  {
+    "category": "Pytests",
+    "question": "Write a test for 'add_prefix(prefix, s)' to check if it adds 'Mr.' correctly to the string 'Smith'.",
+    "answer": "def test_add_prefix():\n    assert add_prefix('Mr.', 'Smith') == 'Mr.Smith'"
+  },
+  {
+    "category": "Pytests",
+    "question": "Create a pytest test to verify that 'split_string(s)' correctly splits 'one two three' into a list.",
+    "answer": "def test_split_string():\n    assert split_string('one two three') == ['one', 'two', 'three']"
+  }
+]

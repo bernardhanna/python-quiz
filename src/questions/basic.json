@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Basic",
+    "question": "Print 'Hello World' to the screen using Python.",
+    "answer": "print('Hello World')"
+  },
+  {
+    "category": "Basic",
+    "question": "Create a variable 'x' and assign the value 5 to it.",
+    "answer": "x = 5"
+  },
+  {
+    "category": "Basic",
+    "question": "Write a for loop to print numbers from 1 to 5.",
+    "answer": "for i in range(1, 6):\n    print(i)"
+  },
+  {
+    "category": "Basic",
+    "question": "How do you create a comment 'This is a comment' in Python?",
+    "answer": "# This is a comment"
+  },
+  {
+    "category": "Basic",
+    "question": "Increment the value of a variable 'a' by 2.",
+    "answer": "a += 2"
+  },
+  {
+    "category": "Basic",
+    "question": "Multiply two variables 'x' and 'y'.",
+    "answer": "result = x * y"
+  },
+  {
+    "category": "Basic",
+    "question": "Create a list of numbers from 1 to 5.",
+    "answer": "numbers = [1, 2, 3, 4, 5]"
+  },
+  {
+    "category": "Basic",
+    "question": "Remove the first occurrence of '3' from a list 'numbers'.",
+    "answer": "numbers.remove(3)"
+  },
+  {
+    "category": "Basic",
+    "question": "Get the first three elements from a list 'items'.",
+    "answer": "first_three = items[:3]"
+  },
+  {
+    "category": "Basic",
+    "question": "Reverse the order of elements in a list 'items'.",
+    "answer": "items.reverse()"
+  },
+  {
+    "category": "Basic",
+    "question": "Create an empty dictionary 'my_dict'.",
+    "answer": "my_dict = {}"
+  },
+  {
+    "category": "Basic",
+    "question": "Add a key-value pair 'key1': 1 to a dictionary 'my_dict'.",
+    "answer": "my_dict['key1'] = 1"
+  }
+]

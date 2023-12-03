@@ -1,0 +1,92 @@
+[
+  {
+    "category": "datetime",
+    "question": "How do you create a datetime object for January 1, 2023, at 12:00 PM?",
+    "answer": "from datetime import datetime\ndt = datetime(2023, 1, 1, 12, 0)"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to get the current date and time using datetime.",
+    "answer": "from datetime import datetime\ncurrent_dt = datetime.now()"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you create a datetime object from the ISO format string '2023-01-01T12:00:00'?",
+    "answer": "from datetime import datetime\ndt = datetime.fromisoformat('2023-01-01T12:00:00')"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to parse a datetime string '01/02/2023 15:30:00' using strptime.",
+    "answer": "from datetime import datetime\ndt = datetime.strptime('01/02/2023 15:30:00', '%d/%m/%Y %H:%M:%S')"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you get the date component of a datetime object as a date object?",
+    "answer": "date_component = dt.date()"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to convert a datetime object to its ISO format string.",
+    "answer": "iso_format = dt.isoformat()"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you replace the year of a datetime object to 2024?",
+    "answer": "new_dt = dt.replace(year=2024)"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to format a datetime object as 'DD-MM-YYYY HH:MM:SS'.",
+    "answer": "formatted_str = dt.strftime('%d-%m-%Y %H:%M:%S')"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you extract the time component of a datetime object?",
+    "answer": "time_component = dt.time()"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to create a date object representing today's date.",
+    "answer": "from datetime import date\ntoday = date.today()"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you create a date object from the ISO format string '2023-01-01'?",
+    "answer": "from datetime import date\nd = date.fromisoformat('2023-01-01')"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to convert a date object to its ISO format string.",
+    "answer": "iso_date_str = d.isoformat()"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you replace the month of a date object to February?",
+    "answer": "new_date = d.replace(month=2)"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to format a date object as 'DD/MM/YYYY'.",
+    "answer": "formatted_date_str = d.strftime('%d/%m/%Y')"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you create a date object for March 14, 2023?",
+    "answer": "from datetime import date\ndate_obj = date(2023, 3, 14)"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to get the weekday number (0 for Monday, 6 for Sunday) for a date object.",
+    "answer": "weekday_num = d.weekday()"
+  },
+  {
+    "category": "datetime",
+    "question": "How do you find the difference in days between two date objects, d1 and d2?",
+    "answer": "delta = d2 - d1\ndiff_days = delta.days"
+  },
+  {
+    "category": "datetime",
+    "question": "Write the code to add 7 days to a date object using timedelta.",
+    "answer": "from datetime import timedelta\nnew_date = d + timedelta(days=7)"
+  }
+]

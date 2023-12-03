@@ -1,0 +1,47 @@
+[
+  {
+    "category": "File Input",
+    "question": "How do you open a file named 'example.txt' in read-only mode in Python?",
+    "answer": "with open('example.txt', 'r') as file:\n    # Read and process the file here"
+  },
+  {
+    "category": "File Input",
+    "question": "How can you read the entire contents of a text file into a string variable in Python?",
+    "answer": "with open('example.txt', 'r') as file:\n    file_contents = file.read()"
+  },
+  {
+    "category": "File Input",
+    "question": "Write code to read and print each line from a file named 'data.txt'.",
+    "answer": "with open('data.txt', 'r') as file:\n    for line in file:\n        print(line)"
+  },
+  {
+    "category": "File Input",
+    "question": "What is the difference between 'read()' and 'readline()' methods when reading a file?",
+    "answer": "'read()' reads the entire file into a single string, while 'readline()' reads one line at a time as a string."
+  },
+  {
+    "category": "File Input",
+    "question": "How do you open a binary file named 'image.jpg' for reading in Python?",
+    "answer": "with open('image.jpg', 'rb') as binary_file:"
+  },
+  {
+    "category": "File Input",
+    "question": "How can you read and process a CSV file named 'data.csv' using the 'csv' module in Python?",
+    "answer": "import csv\n\nwith open('data.csv', 'r') as csv_file:\n    csv_reader = csv.reader(csv_file)\n    for row in csv_reader:\n        # Process each row here"
+  },
+  {
+    "category": "File Input",
+    "question": "How do you check if a file named 'file.txt' exists in a directory using Python?",
+    "answer": "import os\n\nif os.path.isfile('file.txt'):\n    print('File exists')"
+  },
+  {
+    "category": "File Input",
+    "question": "Write code to create a new text file named 'output.txt' and write 'Hello, World!' to it.",
+    "answer": "with open('output.txt', 'w') as file:\n    file.write('Hello, World!')"
+  },
+  {
+    "category": "File Input",
+    "question": "How can you iterate over all the files in a directory and perform an action on each file using Python?",
+    "answer": "import os\n\nfor filename in os.listdir('/path/to/directory'):\n    if os.path.isfile(os.path.join('/path/to/directory', filename)):\n        # Perform an action on the file"
+  }
+]

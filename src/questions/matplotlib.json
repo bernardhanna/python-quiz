@@ -1,0 +1,242 @@
+[
+  {
+    "category": "matplotlib",
+    "question": "How do you create a figure and axes with 2 rows and 3 columns using matplotlib?",
+    "answer": "fig, ax = plt.subplots(2, 3)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to set a title 'Overall Data' for a matplotlib figure.",
+    "answer": "fig.suptitle('Overall Data')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you save the current matplotlib figure to a file named 'data_chart.png'?",
+    "answer": "fig.savefig('data_chart.png')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to display a vertical bar chart with labels 'A', 'B', 'C' and values 10, 20, 15.",
+    "answer": "ax.bar(['A', 'B', 'C'], [10, 20, 15])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a horizontal bar chart with labels 'X', 'Y', 'Z' and values 5, 7, 3?",
+    "answer": "ax.barh(['X', 'Y', 'Z'], [5, 7, 3])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to display a boxplot of the list [1, 2, 3, 4, 5] with label 'Data'.",
+    "answer": "ax.boxplot([1, 2, 3, 4, 5], labels=['Data'])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a line plot for x values [0, 1, 2, 3] and y values [10, 15, 20, 25]?",
+    "answer": "ax.plot([0, 1, 2, 3], [10, 15, 20, 25])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to create a histogram for the values [1, 2, 3, 4] with 2 bins.",
+    "answer": "ax.hist([1, 2, 3, 4], bins=2)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a pie chart with values [25, 35, 40] and labels ['A', 'B', 'C'] showing percentage?",
+    "answer": "ax.pie([25, 35, 40], labels=['A', 'B', 'C'], autopct='%1.1f%%')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to display a scatter plot for x values [1, 2, 3, 4] and y values [10, 20, 30, 40].",
+    "answer": "ax.scatter([1, 2, 3, 4], [10, 20, 30, 40])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you set the title 'Sales Data' for a specific Axes in a matplotlib plot?",
+    "answer": "ax.set_title('Sales Data')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to set the x-axis label to 'Time' and y-axis label to 'Value' for a plot.",
+    "answer": "ax.set_xlabel('Time')\nax.set_ylabel('Value')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you set the x-tick marks to [0, 1, 2, 3, 4] on a plot?",
+    "answer": "ax.set_xticks([0, 1, 2, 3, 4])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to set the y-tick labels to ['Low', 'Medium', 'High'] on a plot.",
+    "answer": "ax.set_yticklabels(['Low', 'Medium', 'High'])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a subplot in the second row, first column of a 2x2 grid?",
+    "answer": "ax = plt.subplot(2, 2, 3)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to rotate x-axis labels by 30 degrees in a matplotlib plot.",
+    "answer": "plt.xticks(rotation=30)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you change the y-axis range to [0, 50] in a matplotlib plot?",
+    "answer": "plt.ylim(0, 50)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to create a filled area plot between x=[1, 2, 3] and y=[4, 3, 2].",
+    "answer": "plt.fill_between([1, 2, 3], [4, 3, 2])"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you display a pie chart with equal aspect ratio in matplotlib?",
+    "answer": "ax.axis('equal')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to create a 3D scatter plot in matplotlib.",
+    "answer": "ax = plt.axes(projection='3d')\nax.scatter3D(x_data, y_data, z_data)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you customize the color and line style of a plot in matplotlib?",
+    "answer": "plt.plot(x, y, color='red', linestyle='--')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to add a grid to a matplotlib plot.",
+    "answer": "plt.grid(True)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How can you add a second y-axis to a matplotlib plot?",
+    "answer": "ax2 = ax.twinx()"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to create an empty plot in matplotlib with specified figure size.",
+    "answer": "plt.figure(figsize=(8, 6))"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you add a secondary x-axis to a matplotlib plot?",
+    "answer": "ax2 = ax.twiny()"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you import the matplotlib.pyplot module in Python?",
+    "answer": "import matplotlib.pyplot as plt"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you read the first line (headings) from a file and process subsequent lines in a try-except block?",
+    "answer": "headings = datafile.readline()\nfor line in datafile:\n  try:\n    age, smoker, region, charges = line.strip().split(',')\n    try:\n      ages_list.append(int(age))\n      charges_list.append(float(charges))\n    except ValueError:\n      print('Conversion error')\n    smokers_dict[smoker] = smokers_dict.get(smoker, 0) + 1\n    regions_dict[region] = regions_dict.get(region, 0) + 1\n  except ValueError:\n    print('Incorrect format for line:', line)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a 2x2 grid of subplots with a size of 10x10 using matplotlib?",
+    "answer": "fig, ax = plt.subplots(2, 2, figsize=(10, 10))"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you set a super title 'Visualisation of Insurance Customer Data' for a matplotlib figure?",
+    "answer": "fig.suptitle('Visualisation of Insurance Customer Data')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a histogram of customer ages with custom bins and axis labels using matplotlib?",
+    "answer": "ax[0,0].set_title('Histogram of Customer Ages')\nax[0,0].set_xlabel('Age')\nax[0,0].set_ylabel('Number of Customers')\nbins = range(0, max(ages_list) + 10, 10)\nax[0,0].set_xticks(bins)\nax[0,0].hist(ages_list, bins, ec='black')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a box plot of customer charges with mean line using matplotlib?",
+    "answer": "ax[0,1].set_title('Box Plot of Charges')\nax[0,1].set_ylabel('Charges ($)')\nax[0,1].boxplot(charges_list, showmeans=True, meanline=True)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a horizontal bar chart comparing smokers and non-smokers using matplotlib?",
+    "answer": "ax[1,0].set_title('Bar Chart of Smokers/Non-Smokers')\nax[1,0].set_xlabel('Number of Customers')\nypos = (0, 1)\nax[1,0].set_yticks(ypos)\nax[1,0].set_yticklabels(smokers_dict.keys())\nax[1,0].barh(ypos, smokers_dict.values())"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a pie chart of customer regions using matplotlib?",
+    "answer": "ax[1,1].set_title('Pie Chart of Regions')\nax[1,1].pie(regions_dict.values(), labels=regions_dict.keys(), autopct='%0f%%')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you save a matplotlib figure to a file named 'plot.png'?",
+    "answer": "plt.savefig('plot.png')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to display a matplotlib plot.",
+    "answer": "plt.show()"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you set the title 'Age Distribution' for a subplot in matplotlib?",
+    "answer": "ax.set_title('Age Distribution')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How can you add a legend to a matplotlib plot?",
+    "answer": "plt.legend()"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a scatter plot in matplotlib using 'ages_list' as x and 'charges_list' as y?",
+    "answer": "plt.scatter(ages_list, charges_list)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to create a line plot in matplotlib using 'ages_list' as x and 'charges_list' as y.",
+    "answer": "plt.plot(ages_list, charges_list)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you customize the color of a histogram to 'green' in matplotlib?",
+    "answer": "plt.hist(data, color='green')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How can you create a subplot grid of size 3x1 in matplotlib?",
+    "answer": "fig, ax = plt.subplots(3, 1)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to set the x-axis label to 'Age' and y-axis label to 'Frequency' in a matplotlib plot.",
+    "answer": "plt.xlabel('Age')\nplt.ylabel('Frequency')"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a bar chart with 'regions_dict' keys as categories and values as heights in matplotlib?",
+    "answer": "plt.bar(regions_dict.keys(), regions_dict.values())"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How can you change the figure size to 12x8 inches in matplotlib?",
+    "answer": "plt.figure(figsize=(12, 8))"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to rotate the x-axis labels by 45 degrees in a matplotlib plot.",
+    "answer": "plt.xticks(rotation=45)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you create a subplot in the first row, second column of a 2x2 grid in matplotlib?",
+    "answer": "ax = plt.subplot(2, 2, 2)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "How do you set the range of the y-axis to [0, 1000] in a matplotlib plot?",
+    "answer": "plt.ylim(0, 1000)"
+  },
+  {
+    "category": "matplotlib",
+    "question": "Write the code to create a filled area plot between 'ages_list' and 'charges_list' using matplotlib.",
+    "answer": "plt.fill_between(ages_list, charges_list)"
+  }
+]

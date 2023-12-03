@@ -1,0 +1,132 @@
+[
+  {
+    "category": "Control Structure",
+    "question": "Write a Python function 'validate_username' that returns False if the username contains 'Admin', is longer than 15 characters, or contains invalid characters (not alphanumeric or underscore). Otherwise, return True.",
+    "answer": "def validate_username(username):\n    if 'Admin' in username or len(username) > 15:\n        return False\n    else:\n        for character in username:\n            if not character.isalpha() and not character.isdigit() and character != '_':\n                return False\n        return True"
+  },
+  {
+    "category": "Control Structures",
+    "question": "Write a loop in Python to input candidate names until the user indicates they are finished. For each name, add the candidate to a dictionary with a vote count of zero, unless they already exist. Display a message if the candidate exists.",
+    "answer": "candidates = {}\nwhile True:\n    name = input('Enter candidate name (or type 'exit' to finish): ')\n    if name == 'exit':\n        break\n    if name in candidates:\n        print(f'{name} already exists.')\n    else:\n        candidates[name] = 0"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How would you check if a dictionary of candidates is empty after a loop, display a message, and terminate the program using sys.exit()?",
+    "answer": "import sys\nif not candidates:\n    print('No candidates added.')\n    sys.exit()"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write an if statement in Python to check if the string 'color' equals 'blue' and print 'Sky is blue'.",
+    "answer": "if color == 'blue':\n    print('Sky is blue')"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Create a while loop in Python that prints each character of the string 'Hello' one by one.",
+    "answer": "i = 0\nwhile i < len('Hello'):\n    print('Hello'[i])\n    i += 1"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write a for loop in Python to iterate over the characters in the string 'Python' and print each character.",
+    "answer": "for char in 'Python':\n    print(char)"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write a for loop in Python to iterate over the string 'breakpoint' and break the loop when it reaches the letter 'p'.",
+    "answer": "for char in 'breakpoint':\n    if char == 'p':\n        break\n    print(char)"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write an if-else statement in Python that checks if the input string is 'yes'. If it is, print 'Confirmed', else print 'Cancelled'.",
+    "answer": "response = input('Your answer: ')\nif response == 'yes':\n    print('Confirmed')\nelse:\n    print('Cancelled')"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write a nested loop in Python to concatenate 'A' with 'B' and 'C', and print each combination.",
+    "answer": "for first in 'A':\n    for second in 'BC':\n        print(first + second)"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write a Python loop that prints each letter of the string 'Python' but skips the letter 'h'.",
+    "answer": "for letter in 'Python':\n    if letter == 'h':\n        continue\n    print(letter)"
+  },
+  {
+    "category": "Control Structure",
+    "question": "In a Python for loop, how do you stop the loop if the current character is 'o' when iterating over the string 'Hello World'?",
+    "answer": "for char in 'Hello World':\n    if char == 'o':\n        break\n    print(char)"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write a for loop with an else block in Python that prints each character of 'Data', then prints 'End' after completing the loop.",
+    "answer": "for char in 'Data':\n    print(char)\nelse:\n    print('End')"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Create an if statement in Python to check if 'cat' is a substring of 'caterpillar' and print 'Substring present'.",
+    "answer": "if 'cat' in 'caterpillar':\n    print('Substring present')"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Write a Python while loop that continues to loop as long as the variable 'keep_running' is True.",
+    "answer": "while keep_running:\n    print('Looping')"
+  },
+  {
+    "category": "Control Structure",
+    "question": "Create a while loop in Python that continuously prompts the user for input and breaks if the user enters 'exit'.",
+    "answer": "while True:\n    user_input = input('Enter something: ')\n    if user_input == 'exit':\n        break"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you initiate a voting round in a Python voting system?",
+    "answer": "round = 1\nresults = {}\neliminated = []\nwhile True:\n    print(f'\\nRound: {round}')"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you input and update the votes for each candidate in a Python voting system?",
+    "answer": "for candidate in sorted(results):\n    results[candidate] = int(input(f'Enter number of votes for {candidate}: '))"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you calculate and display the total number of votes in each round of the Python voting system?",
+    "answer": "total_votes = sum(results.values())\nprint(f'Total Votes: {total_votes}')"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you display the votes and percentages for each candidate in a Python voting system?",
+    "answer": "for candidate in sorted(results, key=results.get, reverse=True):\n    vote_percentage = results[candidate] / total_votes\n    print(f'{candidate}: {results[candidate]} ({vote_percentage:.1%})')"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you identify the leading candidate and check for a winner in a Python voting system?",
+    "answer": "leader = max(results, key=results.get)\nif results[leader] / total_votes > 0.5:\n    break"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you eliminate the candidate with the least votes in a Python voting system?",
+    "answer": "loser = min(results, key=results.get)\ndel results[loser]\neliminated.append(loser)"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you proceed to the next round in a Python voting system?",
+    "answer": "round += 1"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you implement a voting round loop in Python, where each candidate's votes are inputted and updated in a dictionary, and the total votes are displayed?",
+    "answer": "round_number = 1\nwhile True:\n    print(f'Round {round_number}, {len(candidates)} candidates')\n    total_votes = 0\n    for candidate in sorted(candidates):\n        votes = int(input(f'Votes for {candidate}: '))\n        candidates[candidate] += votes\n        total_votes += votes\n    print(f'Total votes in this round: {total_votes}')\n    round_number += 1"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you announce the winner of the voting process?",
+    "answer": "print(f'\\nWinner: {leader}')"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you display the list of eliminated candidates after the voting process?",
+    "answer": "if len(eliminated) > 0:\n    print('Eliminated Candidates')\n    for i, candidate in enumerate(eliminated, start=1):\n        print(f'{i:3} {candidate}')"
+  },
+  {
+    "category": "Control Structures",
+    "question": "How do you display each round number along with the corresponding eliminated candidate?",
+    "answer": "if len(eliminated) > 0:\n    print('Round Candidate')\n    for i, candidate in enumerate(eliminated, start=1):\n        print(f'{i:3} {candidate}')"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Exceptions",
+    "question": "What Python keyword is used for handling exceptions?",
+    "answer": "try"
+  },
+  {
+    "category": "Exceptions",
+    "question": "How do you catch a specific exception in Python?",
+    "answer": "except ValueError"
+  },
+  {
+    "category": "Exceptions",
+    "question": "What keyword is used to re-raise an exception in an except block?",
+    "answer": "raise"
+  },
+  {
+    "category": "Exceptions",
+    "question": "Which Python block is executed regardless of exceptions being thrown?",
+    "answer": "finally"
+  },
+  {
+    "category": "Exceptions",
+    "question": "How can you catch all exceptions in Python?",
+    "answer": "except Exception"
+  },
+  {
+    "category": "Exceptions",
+    "question": "What is the syntax for a try-except block?",
+    "answer": "try:\n    # code\nexcept SomeException:\n    # exception handling code"
+  },
+  {
+    "category": "Exceptions",
+    "question": "What keyword is used to manually raise an exception?",
+    "answer": "raise"
+  },
+  {
+    "category": "Exceptions",
+    "question": "How do you write a try-except block in Python to handle a division by zero error?",
+    "answer": "try:\n    # Division operation\n    result = x / y\nexcept ZeroDivisionError:\n    # Handle division by zero\n    print('Division by zero error')"
+  },
+  {
+    "category": "Exceptions",
+    "question": "Write a try-except block in Python to handle a FileNotFoundError when opening a file.",
+    "answer": "try:\n    # Attempt to open a file\n    file = open('filename.txt', 'r')\nexcept FileNotFoundError:\n    # Handle file not found\n    print('File not found')"
+  },
+  {
+    "category": "Exceptions",
+    "question": "Write a try-except block to safely open 'insurance.csv' and handle a FileNotFoundError.",
+    "answer": "try:\n  with open('insurance.csv') as datafile:\nexcept FileNotFoundError:\n  print('Unable to open the file insurance.csv')"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Inputs",
+    "question": "Write a line of code to ask the user for their name and store it in a variable named 'user_name'.",
+    "answer": "user_name = input('What is your name? ')"
+  },
+  {
+    "category": "Inputs",
+    "question": "How do you get an integer input from the user and store it in a variable named 'age'?",
+    "answer": "age = int(input('Enter your age: '))"
+  },
+  {
+    "category": "Inputs",
+    "question": "Write the code to ask the user for a list of their favorite colors, input as a comma-separated string, and store it as a list in 'favorite_colors'.",
+    "answer": "favorite_colors = input('Enter your favorite colors separated by commas: ').split(',')"
+  },
+  {
+    "category": "Inputs",
+    "question": "How do you get a float input for a variable 'price' and ensure the program doesn't crash if the user inputs text?",
+    "answer": "try:\n    price = float(input('Enter the price: '))\nexcept ValueError:\n    print('Invalid input')"
+  },
+  {
+    "category": "Inputs",
+    "question": "Write a line of code to take a single character input for a variable 'choice' and handle cases where the user inputs more than one character.",
+    "answer": "choice = input('Enter your choice (single character): ')[0]"
+  },
+  {
+    "category": "Inputs",
+    "question": "How do you ask the user for a yes/no response and store it in a boolean variable 'is_confirmed'?",
+    "answer": "is_confirmed = input('Confirm action (yes/no): ').lower() in ['yes', 'y']"
+  },
+  {
+    "category": "Inputs",
+    "question": "Write the code to input a string from the user and store it in 'user_response', ensuring it's stripped of leading/trailing whitespace.",
+    "answer": "user_response = input('Enter your response: ').strip()"
+  },
+  {
+    "category": "Inputs",
+    "question": "How can you ask the user to enter their full name in the format 'Lastname, Firstname' and then extract and store the first name in 'first_name'?",
+    "answer": "first_name = input('Enter your full name (Lastname, Firstname): ').split(',')[1].strip()"
+  },
+  {
+    "category": "Inputs",
+    "question": "Write a Python code to continually ask the user for input until they type 'exit', then stop asking.",
+    "answer": "while True:\n    user_input = input('Enter something (type \"exit\" to stop): ')\n    if user_input == 'exit':\n        break"
+  },
+  {
+    "category": "Inputs",
+    "question": "How do you input a line of text from the user and store each word in a list 'words'?",
+    "answer": "words = input('Enter a line of text: ').split()"
+  }
+]

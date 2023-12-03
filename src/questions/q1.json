@@ -1,0 +1,32 @@
+[
+  {
+    "category": "q1",
+    "question": "A website specifies the following criteria for usernames:\n1. Cannot contain the text Admin\n2. Cannot be longer than 15 characters\n3. Contains only letters, digits, and/or underscores.\nWrite a Python function which takes a single string parameter representing a username and then returns a boolean value indicating whether or not the username is valid based on the above criteria.\n(i) Implement the 'is_valid_username' function.",
+    "answer": "def is_valid_username(username):\n  if \"Admin\" in username or len(username) > 15:\n    return False\n  else:\n    for character in username:\n      if not character.isalpha() and not character.isdigit() and character != '_':\n        return False\n    else:\n      return True"
+  },
+  {
+    "category": "q1",
+    "question": "Write a Python program which repeatedly inputs usernames and validates them using the function from part (a), until the user chooses to quit.",
+    "answer": "if __name__ == \"__main__\":\n  while True:\n    username = input(\"Enter a username or q to quit: \")\n    if username == \"q\":\n      break\n    else:\n      if is_valid_username(username):\n        print(\"Username is valid\")\n      else:\n        print(\"Username is not valid\")"
+  },
+  {
+    "category": "q1",
+    "question": "In a separate file, write PyTest unit tests for the function in part (a), as follows:\nUsername Valid?\njbloggs Yes\nGrace_O'Malley No",
+    "answer": "from validate_username import is_valid_username\ndef test_validate_username():\n  assert is_valid_username(\"jbloggs\") == True\n  assert is_valid_username(\"Grace_O'Malley\") == False"
+  },
+  {
+    "category": "q1",
+    "question": "A website specifies the following criteria for passwords:\n1. Must be between 8 and 15 characters in length (inclusive).\n2. Must include at least one of each of the following:\n   - Uppercase letters\n   - Lowercase letters\n   - Digits\n   - Special (non-alphanumeric) characters.\nWrite a Python function named 'is_valid_password' which takes a single string parameter representing a password and then returns a boolean value indicating whether or not the password is valid. Include a suitable documentation string for this function.",
+    "answer": "def is_valid_password(password):\n  if len(password) < 8 or len(password) > 15:\n    return False\n  has_lowercase = False\n  has_uppercase = False\n  has_digit = False\n  has_special = False\n  for char in password:\n    if char.islower():\n      has_lowercase = True\n    elif char.isupper():\n      has_uppercase = True\n    elif char.isdigit():\n      has_digit = True\n    elif not char.isalnum():\n      has_special = True\n  return has_lowercase and has_uppercase and has_digit and has_special\n"
+  },
+  {
+    "category": "q1",
+    "question": "Write a Python program that repeatedly inputs passwords and validates them using the 'is_valid_password' function from part (a), until the user chooses to quit. The program should ask the user to enter a password, validate it, and provide feedback on whether it's valid or not. If the user enters 'q,' the program should quit.",
+    "answer": "if __name__ == '__main__':\n  while True:\n    password = input('Enter a password or q to quit: ')\n    if password.lower() == 'q':\n      break\n    else:\n      if is_valid_password(password):\n        print('Password is valid')\n      else:\n        print('Password is not valid')\n"
+  },
+  {
+    "category": "q1",
+    "question": "In a separate file, write PyTest unit tests for the 'is_valid_password' function from part (a), as follows:\nPassword Valid?\n&Now4Something Yes\n4Ever! No\n2Good2Be4Gotten? No\nSecret123 No\nOpenSesame! No\nopen_sesame123 No",
+    "answer": "from password_validator import is_valid_password\n\ndef test_password_validator():\n  assert is_valid_password('&Now4Something') == True\n  assert is_valid_password('4Ever!') == False\n  assert is_valid_password('2Good2Be4Gotten?') == False\n  assert is_valid_password('Secret123') == False\n  assert is_valid_password('OpenSesame!') == False\n  assert is_valid_password('open_sesame123') == False\n"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "category": "regularexpressions",
+    "question": "How can you catch and handle any exception that occurs in a Python program?",
+    "answer": "try:\n    # Code that may raise an exception\nexcept Exception as e:\n    print('An exception occurred:', str(e))"
+  }
+]

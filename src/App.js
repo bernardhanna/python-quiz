@@ -2,29 +2,52 @@
  * @Author: Bernard Hanna
  * @Date:   2023-12-02 15:41:10
  * @Last Modified by:   Bernard Hanna
- * @Last Modified time: 2023-12-02 17:36:27
+ * @Last Modified time: 2023-12-03 16:17:32
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import './index.css';
 
-function App() {
-  const [questions, setQuestions] = useState([
-    { question: "Print 'Hello World' to the screen using Python.", answer: "print('Hello World')" },
-    { question: "Create a variable 'x' and assign the value 5 to it.", answer: "x = 5" },
-    { question: "Write a for loop to print numbers from 1 to 5.", answer: "for i in range(1, 6):\n    print(i)" },
-    { question: "How do you create a comment 'This is a comment' in Python?", answer: "# This is a comment" },
-    { question: "Define a function in Python called 'my function' that takes no arguments and prints 'Hello'.", answer: "def my_function():\n    print('Hello')" },
-    { question: "Define a function in Python called 'validate_username' that takes the argument 'username'.", answer: "def validate_username(username):" },
-    { question: "Write a function named 'add' that takes two parameters and returns their sum.", answer: "def add(a, b):\n    return a + b" },
-    { question: "How do you call a function named 'greet' in Python?", answer: "greet()" },
-    { question: "Create a function 'square' that returns the square of its argument.", answer: "def square(x):\n    return x * x" },
-    { question: "Write a Python function that takes a list and returns its length.", answer: "def list_length(lst):\n    return len(lst)" },
-    { question: "How do you define a function 'hello' that takes one argument 'name' and prints 'Hello' followed by the name?", answer: "def hello(name):\n    print('Hello', name)" },
-    { question: "Create a function named 'max' that takes two numbers and returns the larger of the two.", answer: "def max(a, b):\n    return a if a > b else b" },
-    { question: "Write a function 'is_even' that checks if a number is even and returns True or False.", answer: "def is_even(num):\n    return num % 2 == 0" }
-  ]);
+//QUESTIONS
+import basicQuestions from './questions/basic.json';
+import inputQuestions from './questions/inputs.json';
+import functionsQuestions from './questions/functions.json';
+import controlQuestions from './questions/control.json';
+import stringsQuestions from './questions/strings.json';
+import pytestsQuestions from './questions/pytests.json';
+import fileinputQuestions from './questions/fileinput.json';
+import datastructureQuestions from './questions/datastructure.json';
+import datetimeQuestions from './questions/datetime.json';
+import exceptionsQuestions from './questions/exceptions.json';
+import matplotlibQuestions from './questions/matplotlib.json';
 
+import q1Questions from './questions/q1.json';
+import q2Questions from './questions/q2.json';
+import q3Questions from './questions/q3.json';
+
+function App() {
+    // Combine imported questions
+    const [questions, setQuestions] = useState([
+      ...basicQuestions, 
+      ...inputQuestions, 
+      ...functionsQuestions, 
+      ...controlQuestions,
+      ...stringsQuestions, 
+      ...pytestsQuestions, 
+      ...datastructureQuestions,
+      ...datetimeQuestions,
+      ...fileinputQuestions,
+      ...exceptionsQuestions,
+      ...matplotlibQuestions,
+      ...q1Questions,
+      ...q2Questions,
+      ...q3Questions,
+    ]);
+
+    // Add new state variables for isShuffled and isFiltered
+    const [isShuffled, setIsShuffled] = useState(false);
+    const [isFiltered, setIsFiltered] = useState(false);
+    
    // Shuffle function to randomize questions
    const shuffleQuestions = () => {
     const shuffledQuestions = [...questions];
@@ -33,8 +56,8 @@ function App() {
       [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
     }
     setQuestions(shuffledQuestions);
+    setIsShuffled(true); // Set to true after shuffling
   };
-
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userInput, setUserInput] = useState('');
@@ -42,6 +65,30 @@ function App() {
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [score, setScore] = useState(0);
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  useEffect(() => {
+    if (selectedCategories.length > 0) {
+      setIsFiltered(false); // Set isFiltered to false if new categories are selected
+    }
+  }, [selectedCategories]);
+  
+  const handleCategoryChange = (category, isChecked) => {
+    if (isChecked) {
+      setSelectedCategories(prev => [...prev, category]);
+    } else {
+      setSelectedCategories(prev => prev.filter(cat => cat !== category));
+    }
+    // Update isFiltered based on the checked status of the category
+    setIsFiltered(isChecked);
+  };
+
+  const filterQuestionsByCategories = () => {
+    const filteredQuestions = questions.filter(q => selectedCategories.includes(q.category));
+    setQuestions(filteredQuestions);
+    setCurrentQuestion(0); // Reset current question index
+    setIsFiltered(true); 
+  };
 
   const handleSkip = () => {
     setCurrentQuestion((prev) => (prev + 1) % questions.length);
@@ -77,7 +124,7 @@ function App() {
   };
 
   const normalizeCode = (code) => {
-    return code.toLowerCase().replace(/\s+/g, ' ').trim();
+    return code.toLowerCase().replace(/\s+/g, '').trim();
   };
 
   const handleShowAnswer = () => {
@@ -99,16 +146,87 @@ function App() {
   };
 
   return (
-<div className="App p-6">
+    <div className="App p-6">
       {!quizStarted ? (
-       <div className="w-full max-w-[440px] flex justify-between mx-auto px-8 items-center">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:w-full md:w-auto h-[56px]" onClick={startQuiz}>
-            Start Quiz
-          </button>
-          <div className="mt-8 sm:mt-0"></div>
-          <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded h-[56px]" onClick={shuffleQuestions}>
+        <div>
+          <div className="w-full max-w-[440px] flex justify-between mx-auto px-8 items-center">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:w-full md:w-auto h-[56px]" onClick={startQuiz}>
+              Start Quiz
+            </button>
+            <button className={`${isShuffled ? "bg-green-500" : "bg-red-500"} hover:bg-red-700 text-white font-bold py-2 px-4 rounded h-[56px]`} onClick={shuffleQuestions}>
             Randomize Questions First
           </button>
+          </div>
+          <div className="w-full max-w-[440px] flex flex-wrap justify-between mx-auto px-8 items-center mt-4">
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Basic', e.target.checked)} />
+            <span>Basic</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Inputs', e.target.checked)} />
+            <span>Inputs</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Functions', e.target.checked)} />
+            <span>Functions</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Control Structure', e.target.checked)} />
+            <span>Control Structure</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Strings', e.target.checked)} />
+            <span>Strings</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Pytests', e.target.checked)} />
+            <span>Pytests</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Data Structures', e.target.checked)} />
+            <span>Data Structures</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('datetime', e.target.checked)} />
+            <span>Date Time</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('File Input', e.target.checked)} />
+            <span>File Input</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('Exceptions', e.target.checked)} />
+            <span>Exception Handling</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('matplotlib', e.target.checked)} />
+            <span>Matplotlib</span>
+          </label>
+
+          <label class="flex space-x-2 text-left">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('q1', e.target.checked)} />
+            <span>Question 1: Control Structures, Functions, DocStrings, PyTest</span>
+          </label>
+          <label class="flex space-x-2 text-left">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('q2', e.target.checked)} />
+            <span>Question 2: Data Structures, datetime</span>
+          </label>
+          <label class="flex space-x-2 text-left">
+            <input type="checkbox" onChange={(e) => handleCategoryChange('q3', e.target.checked)} />
+            <span>Question 3: File Input, Exception Handling and matplotlib</span>
+          </label>
+          
+            {selectedCategories.length > 0 && !isFiltered && filterQuestionsByCategories()}
+              {/* Conditional rendering for Filter Questions button */}
+              {!isFiltered && selectedCategories.length > 0 && (
+                <button
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  onClick={filterQuestionsByCategories}
+                >
+                  Filter Questions
+                </button>
+              )}
+          </div>
         </div>
       ) : (
         <div className="card bg-white p-6 rounded shadow-lg w-full max-w-[1440px] mx-auto px-8">
@@ -139,6 +257,7 @@ function App() {
       )}
     </div>
   );
+  
 }
 
 export default App;

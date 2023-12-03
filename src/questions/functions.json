@@ -1,0 +1,97 @@
+[
+  {
+    "category": "Functions",
+    "question": "Define a function in Python called 'my function' that takes no arguments and prints 'Hello'.",
+    "answer": "def my_function():\n    print('Hello')"
+  },
+  {
+    "category": "Functions",
+    "question": "Define a function in Python called 'validate_username' that takes the argument 'username'.",
+    "answer": "def validate_username(username):"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a function named 'add' that takes two parameters and returns their sum.",
+    "answer": "def add(a, b):\n    return a + b"
+  },
+  {
+    "category": "Functions",
+    "question": "How do you call a function named 'greet' in Python?",
+    "answer": "greet()"
+  },
+  {
+    "category": "Functions",
+    "question": "Create a function 'square' that returns the square of its argument.",
+    "answer": "def square(x):\n    return x * x"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a Python function that takes a list and returns its length.",
+    "answer": "def list_length(lst):\n    return len(lst)"
+  },
+  {
+    "category": "Functions",
+    "question": "How do you define a function 'hello' that takes one argument 'name' and prints 'Hello' followed by the name?",
+    "answer": "def hello(name):\n    print('Hello', name)"
+  },
+  {
+    "category": "Functions",
+    "question": "Create a function named 'max' that takes two numbers and returns the larger of the two.",
+    "answer": "def max(a, b):\n    return a if a > b else b"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a function 'is_even' that checks if a number is even and returns True or False.",
+    "answer": "def is_even(num):\n    return num % 2 == 0"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a Python function 'count_substring' that uses str.count() to count occurrences of 'ab' in a given string 'text'.",
+    "answer": "def count_substring(text):\n    return text.count('ab')"
+  },
+  {
+    "category": "Functions",
+    "question": "Create a function 'capitalize_string' in Python that takes a string 'sentence' and returns it capitalized using str.capitalize().",
+    "answer": "def capitalize_string(sentence):\n    return sentence.capitalize()"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a function 'is_string_alpha' in Python that uses str.isalpha() to check if a given string 'word' contains only alphabetic characters.",
+    "answer": "def is_string_alpha(word):\n    return word.isalpha()"
+  },
+  {
+    "category": "Functions",
+    "question": "Define a Python function 'find_sub' that uses str.find() to find the first occurrence of the substring 'hello' in a given string 'phrase'.",
+    "answer": "def find_sub(phrase):\n    return phrase.find('hello')"
+  },
+  {
+    "category": "Functions",
+    "question": "Create a function 'split_string' in Python that splits a string 'text' into a list of words using str.split().",
+    "answer": "def split_string(text):\n    return text.split()"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a Python function 'is_string_numeric' that checks if a string 'number_string' is a numeric string using str.isnumeric().",
+    "answer": "def is_string_numeric(number_string):\n    return number_string.isnumeric()"
+  },
+  {
+    "category": "Functions",
+    "question": "Define a Python function 'make_title' that takes a string 'sentence' and returns it in title case using str.title().",
+    "answer": "def make_title(sentence):\n    return sentence.title()"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a function 'reverse_string' in Python that returns a string 'text' reversed using slicing [::-1].",
+    "answer": "def reverse_string(text):\n    return text[::-1]"
+  },
+  {
+    "category": "Functions",
+    "question": "Create a function 'to_uppercase' in Python that converts a string 'text' to uppercase using str.upper().",
+    "answer": "def to_uppercase(text):\n    return text.upper()"
+  },
+  {
+    "category": "Functions",
+    "question": "Write a Python function which takes a single string parameter representing a username and then returns a boolean value indicating whether or not the username is valid based on the criteria of not containing 'Admin', being shorter than 15 characters, and only containing alphanumeric characters or underscores.",
+    "answer": "def is_valid_username(username):\n    if 'Admin' in username or len(username) > 15:\n        return False\n    else:\n        for character in username:\n            if not character.isalpha() and not character.isdigit() and character != '_':\n                return False\n        return True"
+  }
+]

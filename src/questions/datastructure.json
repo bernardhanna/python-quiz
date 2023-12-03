@@ -1,0 +1,107 @@
+[
+  {
+    "category": "Data Structures",
+    "question": "How would you create an empty dictionary in Python to store each candidate's name as the key and the number of votes they received as the value?",
+    "answer": "candidate_votes = {}"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a code snippet to randomly choose an element from the list `[1, 2, 3, 4, 5]`.",
+    "answer": "from random import choice\nresult = choice([1, 2, 3, 4, 5])"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you select 3 unique random elements from the list `[10, 20, 30, 40, 50]`?",
+    "answer": "from random import sample\nselected = sample([10, 20, 30, 40, 50], 3)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a code snippet to shuffle the elements of the list `[1, 2, 3, 4, 5]` in place.",
+    "answer": "from random import shuffle\nvalues = [1, 2, 3, 4, 5]\nshuffle(values)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you generate a random integer between 5 and 10, inclusive?",
+    "answer": "from random import randint\nrand_num = randint(5, 10)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a Python code to append the value 10 to the end of a list named `my_list`.",
+    "answer": "my_list.append(10)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you count the occurrences of 7 in the list `[1, 7, 3, 7, 5, 7]`?",
+    "answer": "count = [1, 7, 3, 7, 5, 7].count(7)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a code snippet to find the first index of the value 'apple' in the list `['banana', 'apple', 'orange']`.",
+    "answer": "index = ['banana', 'apple', 'orange'].index('apple')"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you remove and return the last item from a list `my_list`?",
+    "answer": "last_item = my_list.pop()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a Python code to remove the first occurrence of 'cat' from the list `['dog', 'cat', 'bird', 'cat']`.",
+    "answer": "['dog', 'cat', 'bird', 'cat'].remove('cat')"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you reverse the order of elements in the list `my_list`?",
+    "answer": "my_list.reverse()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a code snippet to sort the list `[3, 1, 4, 1, 5, 9, 2]` in ascending order.",
+    "answer": "numbers = [3, 1, 4, 1, 5, 9, 2]\nnumbers.sort()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you retrieve the value associated with the key 'age' in the dictionary `person` or return 0 if the key does not exist?",
+    "answer": "age = person.get('age', 0)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a code to return the items of the dictionary `{'a': 1, 'b': 2}`.",
+    "answer": "items = {'a': 1, 'b': 2}.items()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you get a list of keys from the dictionary `{'x': 24, 'y': 25}`?",
+    "answer": "keys = {'x': 24, 'y': 25}.keys()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a Python code to remove the entry with the key 'name' from the dictionary `person` and return its value.",
+    "answer": "name_value = person.pop('name')"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you remove and return an arbitrary (key, value) pair from the dictionary `my_dict`?",
+    "answer": "key_value_pair = my_dict.popitem()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a code to update the dictionary `d1` with another dictionary `d2`.",
+    "answer": "d1.update(d2)"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you obtain a list of values from the dictionary `{'id': 1, 'name': 'John'}`?",
+    "answer": "values = {'id': 1, 'name': 'John'}.values()"
+  },
+  {
+    "category": "Data Structures",
+    "question": "Write a Python snippet to open a shelve file named 'data.db'.",
+    "answer": "import shelve\nwith shelve.open('data.db') as shelve_file:\n    # Operations on shelve_file"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How do you close a shelve file in Python?",
+    "answer": "shelve_file.close()"
+  }
+]

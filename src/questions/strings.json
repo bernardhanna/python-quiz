@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Strings",
+    "question": "Write a Python line of code to concatenate two strings 'Hello' and 'World' with a space in between.",
+    "answer": "greeting = 'Hello' + ' ' + 'World'"
+  },
+  {
+    "category": "Strings",
+    "question": "How do you find the length of a string 'Python' in Python?",
+    "answer": "length = len('Python')"
+  },
+  {
+    "category": "Strings",
+    "question": "Write the code to convert the string 'python' to uppercase.",
+    "answer": "upper_case_string = 'python'.upper()"
+  },
+  {
+    "category": "Strings",
+    "question": "How can you check if the string 'data' starts with the letter 'd'?",
+    "answer": "starts_with_d = 'data'.startswith('d')"
+  },
+  {
+    "category": "Strings",
+    "question": "Write a Python expression to replace all occurrences of 'a' with 'o' in the string 'banana'.",
+    "answer": "modified_string = 'banana'.replace('a', 'o')"
+  },
+  {
+    "category": "Strings",
+    "question": "How do you slice the string 'Hello World' to extract just 'World'?",
+    "answer": "world = 'Hello World'[6:]"
+  },
+  {
+    "category": "Strings",
+    "question": "Write a line of Python code to split the string 'one,two,three' into a list of words.",
+    "answer": "word_list = 'one,two,three'.split(',')"
+  },
+  {
+    "category": "Strings",
+    "question": "How can you check if the string 'example' contains the letter 'x'?",
+    "answer": "contains_x = 'x' in 'example'"
+  },
+  {
+    "category": "Strings",
+    "question": "Write a Python line of code to join the list ['Python', 'is', 'fun'] into a single string with spaces.",
+    "answer": "sentence = ' '.join(['Python', 'is', 'fun'])"
+  },
+  {
+    "category": "Strings",
+    "question": "How do you reverse the string 'Python' using slicing?",
+    "answer": "reversed_string = 'Python'[::-1]"
+  }
+]
