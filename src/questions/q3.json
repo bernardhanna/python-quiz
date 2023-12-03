@@ -1,7 +1,53 @@
 [
   {
     "category": "q3",
-    "question": "Coming Soon",
-    "answer": "Coming Soon)"
+    "question": "The file 'insurance.csv' is a comma-separated-values file containing information on Health Insurance customers. It contains 4 columns, as follows:\nage – The customer’s age\nsmoker – Whether or not the customer is a smoker\nregion – The region where the customer lives\ncharges – The health charges incurred by the customer\nWrite a Python program to visualize the data, as follows:\nImport matplotlib.pyplot as plt\nImportant: You may not import any other libraries, modules or features.",
+    "answer": "import matplotlib.pyplot as plt:"
+  },
+  {
+    "category": "q3",
+    "question": "Open the file for reading; use exception handling to deal with the situation where the file cannot be found.",
+    "answer": "try:\n    with open('insurance.csv') as datafile:\n        # Code to read and process the file goes here\nexcept FileNotFoundError:\n    print('Unable to open the file insurance.csv')"
+  },
+  {
+    "category": "q3",
+    "question": "Create one or more data structures (lists and/or dictionaries) to store the data from the file. The program will need to create visualisations based on:\nThe age values and the charges values (lists)\nThe frequencies of the smokers values, i.e. the number of smokers and non-smokers (dictionary)\nThe frequencies of the region values, i.e. how many in each region (dictionary)",
+    "answer": "ages_list = []\ncharges_list = []\nsmokers_dict = {}\nregions_dict = {}"
+  },
+  {
+    "category": "q3",
+    "question": "Read in the first line of the file containing the column headings.",
+    "answer": "headings = datafile.readline()"
+  },
+  {
+    "category": "q3",
+    "question": "For the other lines in the file:\n\n- Split the line into 4 components and assign to 4 variables; use exception handling to deal with the situation where the line is not in the correct format to split.\n- Update the corresponding data structures, converting as required; use exception handling to deal with the situation where a value is not in the correct format to convert.",
+    "answer": "for line in datafile:\n try:\n     age, smoker, region, charges = line.strip().split(\",\")\n     try:\n         ages_list.append(int(age))\n     except ValueError:\n         print(\"Unable to convert age value:\", age)\n\n     try:\n         charges_list.append(float(charges))\n     except ValueError:\n         print(\"Unable to convert charges value:\", charges)\n     smokers_dict[smoker] = smokers_dict.get(smoker,0) + 1\n     regions_dict[region] = regions_dict.get(region,0) + 1\n\n except ValueError:\n     print(\"Incorrect format for line:\", line)"
+  },
+  {
+    "category": "q3",
+    "question": "Using the object-oriented syntax for matplotlib, create a figure and an axes which will contain 4 plots in a 2 x 2 grid, with dimensions 12” x 12”, and set a suitable title for the figure.",
+    "answer": "fig, ax = plt.subplots(2,2, figsize=(10,10))\nfig.suptitle(\"Visualisation of Insurance Customer Data\")"
+  },
+  {
+    "category": "q3",
+    "question": "Create the following visualisations, with appropriate titles and labels and display them in the same figure:\n- A histogram of the customer’s ages, using appropriate bins (intervals);",
+    "answer": "ax[0,0].set_title(\"Histogram of Customer Ages\")\nax[0,0].set_xlabel(\"Age\")\nax[0,0].set_ylabel(\"Number of Customers\")\nbins = range(0,max(ages_list)+10,10)\nax[0,0].set_xticks(bins)\nax[0,0].hist(ages_list, bins, ec=\"black\")"
+  },
+  {
+    "category": "q3",
+    "question": "A box plot of the charges incurred by each customer, including the median and mean lines;",
+    "answer": "ax[0,1].set_title(\"Box Plot of Charges\")\nax[0,1].set_ylabel(\"Charges ($)\")\nax[0,1].boxplot(charges_list, showmeans=True, meanline=True)"
+  },
+  {
+    "category": "q3",
+    "question": "A bar chart of the number of smokers and non-smokers;",
+    "answer": "ax[1,0].set_title(\"Bar Chart of Smokers/Non-Smokers\")\nax[1,0].set_xlabel(\"Number of Customers\")\nypos = (0,1)\nax[1,0].set_yticks(ypos)\nax[1,0].set_yticklabels(smokers_dict.keys())\nax[1,0].barh(ypos, smokers_dict.values())"
+  },
+  {
+    "category": "q3",
+    "question": "A pie chart of the percentage frequency of each region, along with the percentage values.",
+    "answer": "ax[1,1].set_title(\"Pie Chart of Regions\")\nax[1,1].pie(regions_dict.values(), labels=regions_dict.keys(), autopct=\"%.0f%%\")"
   }
 ]
+
