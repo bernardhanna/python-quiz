@@ -32,7 +32,7 @@
   {
     "category": "Control Structure",
     "question": "Write a for loop in Python to iterate over the string 'breakpoint' and break the loop when it reaches the letter 'p'.",
-    "answer": "for char in 'breakpoint':\n    if char == 'p':\n        break\n    print(char)"
+    "answer": "for char in 'breakpoint':\n    if char == 'p':\n  print(char)k\n      break\n  "
   },
   {
     "category": "Control Structure",
