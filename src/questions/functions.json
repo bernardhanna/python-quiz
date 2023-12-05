@@ -87,6 +87,6 @@
   {
     "category": "Functions",
     "question": "Write a Python function 'is_valid_username' which takes a single string parameter representing a username and then returns a boolean value indicating whether or not the username is valid based on the criteria of:\n not containing 'Admin',\n being shorter than 15 characters,\n and only containing alphanumeric characters \nor underscores.",
-    "answer": "def is_valid_username(username):\n    if 'Admin' in username or len(username) > 15:\n        return False\n    else:\n        for character in username:\n            if not character.isalpha() and not character.isdigit() and character != '_':\n                return False\n        else return True"
+    "answer": "def is_valid_username(username):\n    if 'Admin' in username or len(username) > 15:\n        return False\n    else:\n        for character in username:\n            if not character.isalpha() and not character.isdigit() and character != '_':\n                return False\n        else: return True"
   }
 ]
