@@ -2,7 +2,7 @@
  * @Author: Bernard Hanna
  * @Date:   2023-12-02 15:41:10
  * @Last Modified by:   Bernard Hanna
- * @Last Modified time: 2023-12-05 16:23:21
+ * @Last Modified time: 2023-12-05 16:27:02
  */
 import React, { useState, useEffect } from 'react';
 import sanitizeHtml from 'sanitize-html'; // Import sanitize-html
@@ -62,7 +62,7 @@ function App() {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userInput, setUserInput] = useState('');
-  //const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [score, setScore] = useState(0);
@@ -245,14 +245,16 @@ function App() {
             </button>
           </div>
           {showAnswer && (
-              <div className="mt-4 text-gray-700">
-                <p>Answer:</p>
-                {/* Sanitize and render the HTML content */}
-                <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(questions[currentQuestion].answer) }} />
-              </div>
-            )}
+          <div className="mt-4 text-gray-700">
+            <p>Answer:</p>
+            <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(questions[currentQuestion].answer) }} />
+          </div>
+        )}
+        <div className="feedback-message">
+          {feedback && <p>{feedback}</p>}
         </div>
-      )}
+      </div>
+    )}
       {quizStarted && (
         <div>
           <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4" onClick={endQuiz}>
