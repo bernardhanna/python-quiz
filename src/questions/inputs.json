@@ -1,6 +1,11 @@
 [
   {
     "category": "Inputs",
+    "question": "Create an input that reads 'Enter a username or q to quit: ' and stores to a variable called username",
+    "answer": "username = input('Enter a username or q to quit: ') "
+  },
+  {
+    "category": "Inputs",
     "question": "Write a line of code to ask the user for their name and store it in a variable named 'user_name'. HINT: Text inside input should be 'What is your name? '",
     "answer": "user_name = input('What is your name? ')"
   },
