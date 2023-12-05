@@ -11,6 +11,11 @@
   },
   {
     "category": "Inputs",
+    "question": "Convert the string entered into an input to lower and store it in a variable named 'words'....HINT:Text inside input should be 'Enter a line of text: '",
+    "answer": "words = input('Enter a line of text: ').lower().split()"
+  },
+  {
+    "category": "Inputs",
     "question": "Write the code to ask the user for a list of their favorite colors, input as a comma-separated string, and store it as a list in 'favorite_colors'. HINT: Text inside input should read 'Enter your favorite colors separated by commas: ",
     "answer": "favorite_colors = input('Enter your favorite colors separated by commas: ').split(',')"
   },
