@@ -21,23 +21,13 @@
   },
   {
     "category": "Inputs",
-    "question": "Write a line of code to take a single character input for a variable 'choice' and handle cases where the user inputs more than one character.",
-    "answer": "choice = input('Enter your choice (single character): ')[0]"
-  },
-  {
-    "category": "Inputs",
-    "question": "How do you ask the user for a yes/no response and store it in a boolean variable 'is_confirmed'?",
-    "answer": "is_confirmed = input('Confirm action (yes/no): ').lower() in ['yes', 'y']"
+    "question": "How do you ask the user for a yes/no response and store it in a boolean variable 'is_confirmed'? Text inside input should be Confirm(yes/no):",
+    "answer": "is_confirmed = input('Confirm(yes/no): ').lower() in ['yes', 'y']"
   },
   {
     "category": "Inputs",
     "question": "Write the code to input a string from the user and store it in 'user_response', ensuring it's stripped of leading/trailing whitespace.",
     "answer": "user_response = input('Enter your response: ').strip()"
-  },
-  {
-    "category": "Inputs",
-    "question": "How can you ask the user to enter their full name in the format 'Lastname, Firstname' and then extract and store the first name in 'first_name'?",
-    "answer": "first_name = input('Enter your full name (Lastname, Firstname): ').split(',')[1].strip()"
   },
   {
     "category": "Inputs",

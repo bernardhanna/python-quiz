@@ -2,9 +2,10 @@
  * @Author: Bernard Hanna
  * @Date:   2023-12-02 15:41:10
  * @Last Modified by:   Bernard Hanna
- * @Last Modified time: 2023-12-03 16:17:32
+ * @Last Modified time: 2023-12-03 20:09:50
  */
 import React, { useState, useEffect } from 'react';
+import sanitizeHtml from 'sanitize-html'; // Import sanitize-html
 import './App.css';
 import './index.css';
 
@@ -243,8 +244,13 @@ function App() {
               Skip
             </button>
           </div>
-          {showAnswer && <p className="mt-4 text-gray-700">Answer: {questions[currentQuestion].answer}</p>}
-          <p className="mt-4">{feedback}</p>
+          {showAnswer && (
+              <div className="mt-4 text-gray-700">
+                <p>Answer:</p>
+                {/* Sanitize and render the HTML content */}
+                <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(questions[currentQuestion].answer) }} />
+              </div>
+            )}
         </div>
       )}
       {quizStarted && (
