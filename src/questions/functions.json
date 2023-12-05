@@ -41,11 +41,6 @@
   },
   {
     "category": "Functions",
-    "question": "How do you define a function 'hello' that takes one argument 'name' and prints 'Hello' followed by the name?",
-    "answer": "def hello(name):\n    print('Hello', name)"
-  },
-  {
-    "category": "Functions",
     "question": "Create a function named 'max' that takes two numbers and returns the larger of the two.",
     "answer": "def max(a, b):\n    return a if a > b else b"
   },
