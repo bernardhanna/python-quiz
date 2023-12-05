@@ -12,7 +12,7 @@
   {
     "category": "Inputs",
     "question": "Convert the string entered into an input to lower and store it in a variable named 'words'....HINT:Text inside input should be 'Enter a line of text: '",
-    "answer": "words = input('Enter a line of text: ').lower().split()"
+    "answer": "words = input('Enter a line of text: ').lower()"
   },
   {
     "category": "Inputs",
