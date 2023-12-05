@@ -46,11 +46,6 @@
   },
   {
     "category": "Functions",
-    "question": "Write a function 'is_even' that checks if a number is even and returns True or False.",
-    "answer": "def is_even(num):\n    return num % 2 == 0"
-  },
-  {
-    "category": "Functions",
     "question": "Write a Python function 'count_substring' that uses str.count() to count occurrences of 'ab' in a given string 'text'.",
     "answer": "def count_substring(text):\n    return text.count('ab')"
   },
@@ -96,7 +91,7 @@
   },
   {
     "category": "Functions",
-    "question": "Write a Python function which takes a single string parameter representing a username and then returns a boolean value indicating whether or not the username is valid based on the criteria of not containing 'Admin', being shorter than 15 characters, and only containing alphanumeric characters or underscores.",
-    "answer": "def is_valid_username(username):\n    if 'Admin' in username or len(username) > 15:\n        return False\n    else:\n        for character in username:\n            if not character.isalpha() and not character.isdigit() and character != '_':\n                return False\n        return True"
+    "question": "Write a Python function which takes a single string parameter representing a username and then returns a boolean value indicating whether or not the username is valid based on the criteria of:\n not containing 'Admin',\n being shorter than 15 characters,\n and only containing alphanumeric characters \nor underscores.",
+    "answer": "def is_valid_username(username):\n    if 'Admin' in username or len(username) > 15:\n        return False\n    else:\n        for character in username:\n            if not character.isalpha() and not character.isdigit() and character != '_':\n                return False\n        else return True"
   }
 ]
