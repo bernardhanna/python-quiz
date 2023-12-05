@@ -2,7 +2,7 @@
  * @Author: Bernard Hanna
  * @Date:   2023-12-02 15:41:10
  * @Last Modified by:   Bernard Hanna
- * @Last Modified time: 2023-12-03 20:09:50
+ * @Last Modified time: 2023-12-05 16:23:21
  */
 import React, { useState, useEffect } from 'react';
 import sanitizeHtml from 'sanitize-html'; // Import sanitize-html
@@ -62,7 +62,7 @@ function App() {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userInput, setUserInput] = useState('');
-  const [feedback, setFeedback] = useState('');
+  //const [feedback, setFeedback] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const [score, setScore] = useState(0);
