@@ -81,11 +81,6 @@
   },
   {
     "category": "Functions",
-    "question": "Write a Python function named 'contains_only_digits' that takes a single string argument and returns 'True' if the string contains only digit characters (0-9), and 'False' otherwise. Use the 'isdigit()' method for this purpose.",
-    "answer": "def contains_only_digits(s):\n    return s.isdigit()"
-  },
-  {
-    "category": "Functions",
     "question": "Create a function 'to_uppercase' in Python that converts a string 'text' to uppercase using str.upper().",
     "answer": "def to_uppercase(text):\n    return text.upper()"
   },
