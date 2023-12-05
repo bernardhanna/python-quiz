@@ -6,6 +6,16 @@
   },
   {
     "category": "Functions",
+    "question": "Write a Python function which takes a single string parameter representing a username. Call it is_valid_username",
+    "answer": "def is_valid_username(username):\n    print('Hello')"
+  },
+  {
+    "category": "Functions",
+    "question": "Define a function in Python called 'my function' that takes no arguments and prints 'Hello'.",
+    "answer": "def my_function():\n    print('Hello')"
+  },
+  {
+    "category": "Functions",
     "question": "Define a function in Python called 'validate_username' that takes the argument 'username'.",
     "answer": "def validate_username(username):"
   },
