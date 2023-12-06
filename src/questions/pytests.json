@@ -2,7 +2,7 @@
   {
     "category": "Pytests",
     "question": "Write a pytest to import the 'is_valid_username' function from the module 'asl'.",
-    "answer": "from asl import is_valid_username\ndef test_import_is_valid_username():\n    assert callable(is_valid_username)"
+    "answer": "from asl import is_valid_username"
   },
   {
     "category": "Pytests",

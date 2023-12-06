@@ -21,11 +21,6 @@
   },
   {
     "category": "Strings",
-    "question": "In a variable called 'modified_string' - Write a Python expression to replace all occurrences of 'a' with 'o' in the string 'banana'.",
-    "answer": "modified_string = 'banana'.replace('a', 'o')"
-  },
-  {
-    "category": "Strings",
     "question": "In a variable called 'world' - How do you slice the string 'Hello World' to extract just 'World'?",
     "answer": "world = 'Hello World'[6:]"
   },
