@@ -1,6 +1,136 @@
 [
   {
     "category": "q2",
+    "question": "import from the string module provides a convenient and efficient way to access all lowercase letters of the English alphabet for string manipulation or processing tasks",
+    "answer": "from string import ascii_lowercase"
+  },
+  {
+    "category": "q2",
+    "question": "Write a function get_frequencies()",
+    "answer": "def get_frequencies(filename):"
+  },
+  {
+    "category": "q2",
+    "question": "Initialize a dictionary to store frequencies of each lowercase letters",
+    "answer": "frequencies = {letter: 0 for letter in ascii_lowercase}"
+  },
+  {
+    "category": "q2",
+    "question": "Open a file and read its contents and Convert its content to lowercase to count all instances",
+    "answer": "with open(filename, 'r') as file:\n text = file.read().lower()"
+  },
+  {
+    "category": "q2",
+    "question": "Count the frequencies of each letter, insert it into the frequencies dictionary and return the dictionary ",
+    "answer": "for letter in text:\n    if letter in ascii_lowercase:\n        frequencies[letter] += 1\n    return frequencies"
+  },
+  {
+    "category": "q2",
+    "question": "Write a function get_status_codes() to determine the frequencies of the web status codes in a file. The function should: take a single parameter representing a filename & return a dictionary containing the status codes and their corresponding frequencies in the file. For now just intilaize the function, we will step through the rest in the next questions",
+    "answer": "def get_status_codes(filename):"
+  },
+  {
+    "category": "q2",
+    "question": "Open the file and read its contents",
+    "answer": "with open(filename, 'r') as file:"
+  },
+  {
+    "category": "q2",
+    "question": "Split line into components and get the status code Assuming status code is the last component",
+    "answer": "for line in file:\n components = line.split()\n status_code = components[-1]"
+  },
+  {
+    "category": "q2",
+    "question": "If status_code not in dictionary  Insert status_code into dictionary as key with value 1 Otherwise Add 1 to the value for the this status_code (as key)",
+    "answer": " if status_code not in status_code_freq:\n  status_code_freq[status_code] = 1\n else:\n  status_code_freq[status_code] += 1"
+  },
+  {
+    "category": "q2",
+    "question": "finally return status_code_freq",
+    "answer": "return status_code_freq"
+  },
+  {
+    "category": "q2",
+    "question": "Write a function get_frequencies()",
+    "answer": "def get_frequencies(filename):"
+  },
+  {
+    "category": "q2",
+    "question": "Initialize a dictionary to store frequencies of each lowercase letters",
+    "answer": "frequencies = {letter: 0 for letter in ascii_lowercase}"
+  },
+  {
+    "category": "q2",
+    "question": "Open a file and read its contents and Convert its content to lowercase to count all instances",
+    "answer": "with open(filename, 'r') as file:\n text = file.read().lower()"
+  },
+  {
+    "category": "q2",
+    "question": "Count the frequencies of each letter, insert it into the frequencies dictionary and return the dictionary ",
+    "answer": "for letter in text:\n    if letter in ascii_lowercase:\n        frequencies[letter] += 1\n    return frequencies"
+  },
+  {
+    "category": "q2",
+    "question": "Write a function get_status_codes() to determine the frequencies of the web status codes in a file. The function should: take a single parameter representing a filename & return a dictionary containing the status codes and their corresponding frequencies in the file. For now just intilaize the function, we will step through the rest in the next questions",
+    "answer": "def get_status_codes(filename):"
+  },
+  {
+    "category": "q2",
+    "question": "Open the file and read its contents",
+    "answer": "with open(filename, 'r') as file:"
+  },
+  {
+    "category": "q2",
+    "question": "Split line into components and get the status code Assuming status code is the last component",
+    "answer": "for line in file:\n components = line.split()\n status_code = components[-1]"
+  },
+  {
+    "category": "q2",
+    "question": "If status_code not in dictionary  Insert status_code into dictionary as key with value 1 Otherwise Add 1 to the value for the this status_code (as key)",
+    "answer": " if status_code not in status_code_freq:\n  status_code_freq[status_code] = 1\n else:\n  status_code_freq[status_code] += 1"
+  },
+  {
+    "category": "q2",
+    "question": "finally return status_code_freq",
+    "answer": "return status_code_freq"
+  },
+  {
+    "category": "q2",
+    "question": "Write a function get_next_birthday() which takes a singl string parameter representing someone’s date of birth in the format dd/mYYYY and determines their next birthday and returns a string representing their next birthday in the format dd/mm/YYYY. Form now just import datetime and def the function def get_next_birthday",
+    "answer": "import datetime\n def get_next_birthday(dob_str):\n"
+  },
+  {
+    "category": "q2",
+    "question": "Convert the date of birth string into a date object",
+    "answer": "dob = datetime.datetime.strptime(dob_str, '%d/%m/%Y')"
+  },
+  {
+    "category": "q2",
+    "question": "Get the current date",
+    "answer": "current_date = datetime.datetime.now()"
+  },
+  {
+    "category": "q2",
+    "question": "Create a date object for their birthday this year",
+    "answer": "this_year_birthday = dob.replace(year=current_date.year)"
+  },
+  {
+    "category": "q2",
+    "question": "Create a date object for their birthday this year",
+    "answer": "this_year_birthday = dob.replace(year=current_date.year)"
+  },
+  {
+    "category": "q2",
+    "question": "If their birthday this year has passed, then Create a date object for their birthday next year",
+    "answer": "if current_date > this_year_birthday:\n next_year_birthday = this_year_birthday.replace(year=current_date.year + 1)\n else: \n  next_year_birthday = this_year_birthday"
+  },
+  {
+    "category": "q2",
+    "question": "Return the birthday in the format dd/mm/YYYY",
+    "answer": "return next_year_birthday.strftime('%d/%m/%Y')"
+  },
+  {
+    "category": "q2",
     "question": "The Exhaustive Ballot is a voting system used to elect a single winner, where voters cast a single vote for their preferred candidate. If no candidate has received more than 50% of votes cast, then the candidate with the fewest votes is eliminated, and a further round of voting occurs. This process is repeated for as many rounds as necessary until one candidate has a majority.\n\nWrite a Python program which uses a dictionary to process the results of such an election.\n\nImportant: You may only import the sys module for this question. You may not import any other libraries, modules or features.\n\nInitialize the dictionary as follows:\n- Create an empty dictionary which will store the name of each candidate (as key) and the number of votes received (as value).\n- Use a loop to input the name of each candidate, until the user indicates they are finished. For each name entered, the candidate should be inserted into the dictionary as a key with a value of zero, unless the candidate already exists in the dictionary, in which case a suitable message should be displayed.\n- After the loop, check if the dictionary is empty, in which case a suitable message should be displayed and the program terminated using sys.exit().",
     "answer": "import sys\n\nresults = {}\nwhile True:\n candidate = input(\"Enter candidate's name or q to continue: \")\n if candidate == \"q\":\n break\n elif candidate in results:\n print(\"Candidate already included\")\n else:\n results[candidate] = 0\nif len(results) == 0:\n print(\"No candidates entered, quitting\")\n sys.exit()"
   },
