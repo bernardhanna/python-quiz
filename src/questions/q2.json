@@ -6,7 +6,7 @@
   },
   {
     "category": "q2",
-    "question": "Write a function get_frequencies()",
+    "question": "Write a function get_frequencies() that takes a single parameter called filename",
     "answer": "def get_frequencies(filename):"
   },
   {
