@@ -1,8 +1,13 @@
 [
   {
     "category": "Data Structures",
-    "question": "How would you create an empty dictionary in Python to store each candidate's name as the key and the number of votes they received as the value?",
+    "question": "How would you create an empty dictionary called 'candidate_votes' in Python?",
     "answer": "candidate_votes = {}"
+  },
+  {
+    "category": "Data Structures",
+    "question": "How would you create an empty List called 'candidate_votes",
+    "answer": "candidate_votes = []"
   },
   {
     "category": "Data Structures",
