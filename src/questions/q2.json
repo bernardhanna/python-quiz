@@ -11,7 +11,7 @@
   },
   {
     "category": "q2",
-    "question": "Initialize a dictionary to store frequencies of each lowercase letters",
+    "question": "Initialize a dictionary to store frequencies of each lowercase letters with all frequencies starting at zero using dictionary comprehension in Python",
     "answer": "frequencies = {letter: 0 for letter in ascii_lowercase}"
   },
   {
