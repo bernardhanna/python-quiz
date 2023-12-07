@@ -1,6 +1,11 @@
 [
   {
     "category": "matplotlib",
+    "question": "How do you import matplotlib?",
+    "answer": "import matplotlib.pyplot as plt"
+  },
+  {
+    "category": "matplotlib",
     "question": "How do you create a figure and axes with 2 rows and 3 columns using matplotlib?",
     "answer": "fig, ax = plt.subplots(2, 3)"
   },
