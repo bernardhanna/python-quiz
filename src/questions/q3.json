@@ -7,7 +7,7 @@
   {
     "category": "q3",
     "question": "Open the file for reading; use exception handling to deal with the situation where the file cannot be found.",
-    "answer": "try:\n    with open('insurance.csv') as datafile:\n        # Code to read and process the file goes here\nexcept FileNotFoundError:\n    print('Unable to open the file insurance.csv')"
+    "answer": "try:\n    with open('insurance.csv') as datafile:\n except FileNotFoundError:\n    print('Unable to open the file insurance.csv')"
   },
   {
     "category": "q3",
