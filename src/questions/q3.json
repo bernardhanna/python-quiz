@@ -2,7 +2,7 @@
   {
     "category": "q3",
     "question": "The file 'insurance.csv' is a comma-separated-values file containing information on Health Insurance customers. It contains 4 columns, as follows:\nage – The customer’s age\nsmoker – Whether or not the customer is a smoker\nregion – The region where the customer lives\ncharges – The health charges incurred by the customer\nWrite a Python program to visualize the data, as follows:\nImport matplotlib.pyplot as plt\nImportant: You may not import any other libraries, modules or features.",
-    "answer": "import matplotlib.pyplot as plt:"
+    "answer": "import matplotlib.pyplot as plt"
   },
   {
     "category": "q3",
