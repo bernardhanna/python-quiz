@@ -21,7 +21,17 @@
   },
   {
     "category": "q3",
-    "question": "For the other lines in the file:\n\n- Split the line into 4 components and assign to 4 variables; use exception handling to deal with the situation where the line is not in the correct format to split.\n- Update the corresponding data structures, converting as required; use exception handling to deal with the situation where a value is not in the correct format to convert.",
+    "question": "For the other lines in the file:\n\n- Split the line into 4 components and assign to 4 variables;",
+    "answer": "for line in datafile:\n try:\n     age, smoker, region, charges = line.strip().split(\",\")\n"
+  },
+  {
+    "category": "q3",
+    "question": "Update the corresponding data structures, converting as required; use exception handling to deal with the situation where a value is not in the correct format to convert. TIP: check the CSV values, if they are integers, booleans, strings, floats etc. Append to the list based on the value type. Use try except ValueError for lists. For the 2 dictionaries, increments the count for the  key in XXXX_dict, initializing it to 1 if the key doesn't exist, or increasing its current value by 1 if it does  ",
+    "answer": "try:\n     ages_list.append(int(age))\n except ValueError:\n     print(\"Unable to convert age value:\", age)\n\n try:\n     charges_list.append(float(charges))\n except ValueError:\n     print(\"Unable to convert charges value:\", charges)\n smokers_dict[smoker] = smokers_dict.get(smoker,0) + 1\n regions_dict[region] = regions_dict.get(region,0) + 1\n"
+  },
+  {
+    "category": "q3",
+    "question": "PUT IT ALL TOGTHER: For the other lines in the file:\n\n- Split the line into 4 components and assign to 4 variables; use exception handling to deal with the situation where the line is not in the correct format to split.\n- Update the corresponding data structures, converting as required; use exception handling to deal with the situation where a value is not in the correct format to convert.",
     "answer": "for line in datafile:\n try:\n     age, smoker, region, charges = line.strip().split(\",\")\n     try:\n         ages_list.append(int(age))\n     except ValueError:\n         print(\"Unable to convert age value:\", age)\n\n     try:\n         charges_list.append(float(charges))\n     except ValueError:\n         print(\"Unable to convert charges value:\", charges)\n     smokers_dict[smoker] = smokers_dict.get(smoker,0) + 1\n     regions_dict[region] = regions_dict.get(region,0) + 1\n\n except ValueError:\n     print(\"Incorrect format for line:\", line)"
   },
   {
