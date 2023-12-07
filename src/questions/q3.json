@@ -36,8 +36,13 @@
   },
   {
     "category": "q3",
-    "question": "Using the object-oriented syntax for matplotlib, create a figure and an axes which will contain 4 plots in a 2 x 2 grid, with dimensions 12” x 12”, and set a suitable title for the figure.",
-    "answer": "fig, ax = plt.subplots(2,2, figsize=(10,10))\nfig.suptitle(\"Visualisation of Insurance Customer Data\")"
+    "question": "Using the object-oriented syntax for matplotlib, create a figure and an axes which will contain 4 plots in a 2 x 2 grid, with dimensions 12” x 12”,\\",
+    "answer": "fig, ax = plt.subplots(2,2, figsize=(12,12))\n"
+  },
+  {
+    "category": "q3",
+    "question": "set a suitable title for the figure.",
+    "answer": "fig.suptitle(\"My Title\")"
   },
   {
     "category": "q3",
