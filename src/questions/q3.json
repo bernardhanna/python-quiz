@@ -22,7 +22,7 @@
   {
     "category": "q3",
     "question": "For the other lines in the file:\n\n- Split the line into 4 components and assign to 4 variables;",
-    "answer": "for line in datafile:\n try:\n     age, smoker, region, charges = line.strip().split(\",\")\n"
+    "answer": "for line in datafile:\n try:\n     age, smoker, region, charges = line.strip().split(\",\")\n except ValueError:\n     print(\"Incorrect format for line:\", line)"
   },
   {
     "category": "q3",
