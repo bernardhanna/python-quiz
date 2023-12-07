@@ -2,7 +2,7 @@
  * @Author: Bernard Hanna
  * @Date:   2023-12-02 15:41:10
  * @Last Modified by:   Bernard Hanna
- * @Last Modified time: 2023-12-05 16:27:02
+ * @Last Modified time: 2023-12-07 14:43:02
  */
 import React, { useState, useEffect } from 'react';
 import sanitizeHtml from 'sanitize-html'; // Import sanitize-html
@@ -147,7 +147,7 @@ function App() {
   };
 
   return (
-    <div className="App p-6">
+    <div className="p-6 App">
       {!quizStarted ? (
         <div>
           <div className="w-full max-w-[440px] flex justify-between mx-auto px-8 items-center">
@@ -221,7 +221,7 @@ function App() {
               {/* Conditional rendering for Filter Questions button */}
               {!isFiltered && selectedCategories.length > 0 && (
                 <button
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  className="px-4 py-2 font-bold text-white bg-red-500 rounded hover:bg-red-700"
                   onClick={filterQuestionsByCategories}
                 >
                   Filter Questions
@@ -232,15 +232,15 @@ function App() {
       ) : (
         <div className="card bg-white p-6 rounded shadow-lg w-full max-w-[1440px] mx-auto px-8">
           <p className="text-lg font-semibold">{questions[currentQuestion].question}</p>
-          <textarea className="mt-4 mb-4 p-2 w-full border rounded" value={userInput} onChange={(e) => setUserInput(e.target.value)} rows="4" />
+          <textarea className="w-full p-2 mt-4 mb-4 border rounded" value={userInput} onChange={(e) => setUserInput(e.target.value)} rows="15" />
           <div className="w-full flex flex-row justify-between max-w-[768px] mx-auto">
-            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2" onClick={handleShowAnswer}>
+            <button className="px-4 py-2 mt-2 font-bold text-white bg-green-500 rounded hover:bg-green-700" onClick={handleShowAnswer}>
               Get Answer
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={checkAnswer}>
+            <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700" onClick={checkAnswer}>
               Submit Answer
             </button>
-            <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mt-2" onClick={handleSkip}>
+            <button className="px-4 py-2 mt-2 font-bold text-white bg-yellow-500 rounded hover:bg-yellow-700" onClick={handleSkip}>
               Skip
             </button>
           </div>
@@ -257,7 +257,7 @@ function App() {
     )}
       {quizStarted && (
         <div>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4" onClick={endQuiz}>
+          <button className="px-4 py-2 mt-4 font-bold text-white bg-red-500 rounded hover:bg-red-700" onClick={endQuiz}>
             End Quiz
           </button>
           <p className="mt-4">Score: {score}</p>
