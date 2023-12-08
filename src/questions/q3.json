@@ -51,12 +51,12 @@
   },
   {
     "category": "q3",
-    "question": "Set the title called 'Histogram of Customer Ages' ",
+    "question": "Set the title called 'Histogram of Customer Ages'  in the first row and first column of the grid ",
     "answer": "ax[0,0].set_title(\"Histogram of Customer Ages\")\n"
   },
   {
     "category": "q3",
-    "question": "Set the X axis label' ",
+    "question": "Set the X axis label at the first row and first column in a grid of subplots within a Matplotlib figure.' ",
     "answer": "ax[0,0].set_xlabel(\"Age\")\n"
   },
   {
