@@ -46,8 +46,33 @@
   },
   {
     "category": "q3",
-    "question": "Create the following visualisations, with appropriate titles and labels and display them in the same figure:\n- A histogram of the customer’s ages, using appropriate bins (intervals);",
+    "question": "Next we will Create the following visualisations, with appropriate titles and labels and display them in the same figure:\n- A histogram of the customer’s ages, using appropriate bins (intervals); Below is teh full set for histogram. Afterwards we will step through theme individually",
     "answer": "ax[0,0].set_title(\"Histogram of Customer Ages\")\nax[0,0].set_xlabel(\"Age\")\nax[0,0].set_ylabel(\"Number of Customers\")\nbins = range(0,max(ages_list)+10,10)\nax[0,0].set_xticks(bins)\nax[0,0].hist(ages_list, bins, ec=\"black\")"
+  },
+  {
+    "category": "q3",
+    "question": "Set the title called 'Histogram of Customer Ages' ",
+    "answer": "ax[0,0].set_title(\"Histogram of Customer Ages\")\n"
+  },
+  {
+    "category": "q3",
+    "question": "Set the X axis label' ",
+    "answer": "ax[0,0].set_xlabel(\"Age\")\n"
+  },
+  {
+    "category": "q3",
+    "question": "Set the Y axis label' ",
+    "answer": "ax[0,0].set_ylabel(\"Number of Customers\")n"
+  },
+  {
+    "category": "q3",
+    "question": "prepare and plot the histogram of age data(ages_list)), where the ages are grouped into bins of 10 years (0-9, 10-19, etc.), and the histogram is displayed on the first subplot of the figure.",
+    "answer": "bins = range(0,max(ages_list)+10,10)\nax[0,0].set_xticks(bins)\n"
+  },
+  {
+    "category": "q3",
+    "question": "Finally set the edge color of the histogram bars to black, which can help in visually distinguishing the bins.",
+    "answer": "ax[0,0].hist(ages_list, bins, ec=\"black\")"
   },
   {
     "category": "q3",
