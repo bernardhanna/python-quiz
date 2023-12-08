@@ -66,12 +66,12 @@
   },
   {
     "category": "q3",
-    "question": "prepare and plot the histogram of age data(ages_list)), where the ages are grouped into bins of 10 years (0-9, 10-19, etc.), and the histogram is displayed on the first subplot of the figure.",
+    "question": "prepare and plot the histogram of age data(ages_list)), where the ages are grouped into bins of 10 years (0-9, 10-19, etc.)",
     "answer": "bins = range(0,max(ages_list)+10,10)"
   },
   {
     "category": "q3",
-    "question": "sets the x-tick marks on the first subplot (assuming ax is a 2D array of subplot axes objects). The x-tick marks are set to the values in bins. This is useful for aligning the x-axis ticks with the bins of the histogram",
+    "question": "set the x-tick marks on the first subplot (assuming ax is a 2D array of subplot axes objects). The x-tick marks are set to the values in bins. This is useful for aligning the x-axis ticks with the bins of the histogram",
     "answer": "ax[0,0].set_xticks(bins)"
   },
   {
