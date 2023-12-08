@@ -1,7 +1,7 @@
 [
 {
     "category": "q2",
-    "question": "Write a function get_next_birthday() which takes a singl string parameter representing someone’s date of birth in the format dd/mYYYY and determines their next birthday and returns a string representing their next birthday in the format dd/mm/YYYY. Form now just import datetime and def the function def get_next_birthday",
+    "question": "import datetime and def the function def get_next_birthday",
     "answer": "import datetime\n def get_next_birthday(dob_str):\n"
   },
   {
@@ -64,6 +64,4 @@
     "question": "Display the results of the election, including:\n- The name of the winning candidate\n- The names of the eliminated candidates, along with the round number in which they were eliminated",
     "answer": "print(\"\\nWinner:\", leader)\n\nif len(eliminated) > 0:\n    print(\"Eliminated Candidates\")\n    print(\"Round Candidate\")\n    for round in range(0, len(eliminated)):\n        print(f\"{round+1:3} {eliminated[round]}\")\n\ndisplay_time = datetime.datetime.now()\nprint(f\"Election results displayed at {display_time}\")"
   }
-
-
 ]
