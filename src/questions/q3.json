@@ -62,7 +62,7 @@
   {
     "category": "q3",
     "question": "Set the Y axis label 'Number of Customers' at the first row and first column in a grid of subplots within a Matplotlib figure.' ",
-    "answer": "ax[0,0].set_ylabel(\"Number of Customers\")n"
+    "answer": "ax[0,0].set_ylabel(\"Number of Customers\")"
   },
   {
     "category": "q3",
