@@ -56,12 +56,12 @@
   },
   {
     "category": "q3",
-    "question": "Set the X axis label at the first row and first column in a grid of subplots within a Matplotlib figure.' ",
+    "question": "Set the X axis label names 'Age' at the first row and first column in a grid of subplots within a Matplotlib figure.' ",
     "answer": "ax[0,0].set_xlabel(\"Age\")\n"
   },
   {
     "category": "q3",
-    "question": "Set the Y axis label' ",
+    "question": "Set the Y axis label 'Number of Customers' at the first row and first column in a grid of subplots within a Matplotlib figure.' ",
     "answer": "ax[0,0].set_ylabel(\"Number of Customers\")n"
   },
   {
